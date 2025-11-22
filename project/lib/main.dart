@@ -11,19 +11,27 @@ import 'utils/constants.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Initialize Firebase
-  // Note: You need to add your Firebase configuration files
-  // For now, we'll handle the case where Firebase might not be initialized
+  // Initialize Firebase for Android
+  // Make sure google-services.json is in android/app/ directory
   try {
     await Firebase.initializeApp().timeout(
-      const Duration(seconds: 5),
+      const Duration(seconds: 10),
     );
-    print('Firebase initialized successfully');
+    print('✅ Firebase initialized successfully');
   } on TimeoutException {
-    print('Firebase initialization timeout');
+    print('❌ Firebase initialization timeout');
+    print('Please check:');
+    print('1. google-services.json is in android/app/ directory');
+    print('2. Google Services plugin is configured in build.gradle.kts');
+    print('3. Firebase project is set up correctly');
   } catch (e) {
-    print('Firebase initialization error: $e');
-    print('Please add your Firebase configuration files (google-services.json)');
+    print('❌ Firebase initialization error: $e');
+    print('');
+    print('SETUP REQUIRED for Android:');
+    print('1. Download google-services.json from Firebase Console');
+    print('2. Place it in android/app/ directory');
+    print('3. Ensure build.gradle.kts has Google Services plugin');
+    print('4. Run: flutter clean && flutter pub get');
     // Continue anyway - app will show error screens if Firebase is needed
   }
   
