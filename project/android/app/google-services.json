@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "316815193436",
+    "project_id": "campus-food-waste-connec-a3c05",
+    "storage_bucket": "campus-food-waste-connec-a3c05.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316815193436:android:e611a3a1e2893c51bffd99",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4GRwhncb0wi9bbLsXS3W7IvjN12RYY54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
